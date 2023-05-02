@@ -20,6 +20,7 @@ y = np.dot(X, np.array([1, 2])) + 3
 mlflow.autolog()
 model = LinearRegression()
 with mlflow.start_run() as run:
+    mlflow.doctor()
     model.fit(X, y)
 
 print_auto_logged_info(mlflow.get_run(run_id=run.info.run_id))
