@@ -18,8 +18,6 @@ def root_mean_squared_error(eval_df, __bulletin_metrics):
     return np.sqrt((np.abs(eval_df['prediction'] - eval_df['target'])**2).mean())
 
 
-
-
 X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
 y = np.dot(X, np.array([1, 2])) + 3
 
